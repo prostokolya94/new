@@ -79,12 +79,9 @@ body {
   display: flex;
   justify-content: space-evenly;
   padding: 0;
-  
-}
+ }
 
-.logo {
-  transition-duration: 1.1s;
-}
+
 
 a {
   text-decoration: none;
@@ -111,5 +108,29 @@ a:hover {
   color: rgba(0, 0, 0, 0.397);
   padding: 5px 3px;
   font-family: 'Roboto-Italic';
+  box-shadow: 2px 1px 1px rgba(85, 138, 75, 0.397); ;
 }
 
+.garden {
+  margin: 50px auto 0;
+  width: 80%;
+  display: flex;
+  padding: 0;
+  transition: 0.2s;
+}
+
+.plant {
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  background: white;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.planty {
+  height: 60px;
+  width: 60px;
+}
