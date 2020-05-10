@@ -73,6 +73,13 @@ body {
   transition: 0.2s;
 }
 
+.intro-up {
+  margin: -60px 0 0 25%;
+  font-size: 50px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
+  transition: 0.2s;
+}
+
 .main-logo {
   margin: 50px auto 0;
   width: 80%;
@@ -119,6 +126,17 @@ a:hover {
   transition: 0.2s;
 }
 
+.garden-down {
+  margin: 110px auto 0;
+  width: 80%;
+  display: flex;
+  padding: 0;
+}
+
+.next {
+  margin: 10px auto 0;
+}
+
 .plant {
   align-items: center;
   height: 80px;
@@ -138,4 +156,11 @@ a:hover {
 
 .plant:hover {
   transform: scale(1.1);
+}
+
+.back-button {
+  position: absolute;
+  display: inline-block;
+  vertical-align:top; 
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
