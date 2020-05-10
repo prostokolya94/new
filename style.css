@@ -128,9 +128,14 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.2s 0.1s;
 }
 
 .planty {
   height: 60px;
   width: 60px;
+}
+
+.plant:hover {
+  transform: scale(1.1);
 }
