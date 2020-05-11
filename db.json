@@ -1,0 +1,46 @@
+{
+  "flowerbed": [
+    {
+      "plant_id": 1,
+      "id": 12
+    },
+    {
+      "plant_id": 2,
+      "id": 13
+    },
+    {
+      "plant_id": 1,
+      "id": 14
+    },
+    {
+      "plant_id": 2,
+      "id": 15
+    }
+  ],
+  "plants": [
+    {
+      "id": 1,
+      "count": 0,
+      "name": "Комнатная фиалка",
+      "nameInLatin": "Saintpaulia",
+      "timeoutOfWater": 72,
+      "maxTemp": 24,
+      "minTemp": 15,
+      "lightMode": 15,
+      "lightTime": 14,
+      "imageId": 0
+    },
+    {
+      "id": 2,
+      "count": 0,
+      "name": "Фиалка",
+      "nameInLatin": "Saintpaulia",
+      "timeoutOfWater": 31,
+      "maxTemp": 24,
+      "minTemp": 1,
+      "lightMode": 5,
+      "lightTime": 14,
+      "imageId": 1
+    }
+  ]
+}
