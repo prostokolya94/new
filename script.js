@@ -39,26 +39,20 @@ const pullOfPlants = [
 
 //добавление на клумбу
 const myPlants = [];
-let plant1 = document.querySelector('.first');
-plant1.onclick = function () {
-  let item1 = pullOfPlants.find(item1 => item1.id == 1);
-  if (item1.count == 0) {
-    myPlants.push(item1);
-    item1.count += 1;
-  } else {
-    item1.count += 1;
-  }
-  console.log(myPlants)
-};
+let y = document.querySelectorAll('.plant');
+y.forEach(item => {
+  item.onclick = clickElem;
+})
 
-let plant2 = document.querySelector('.second');
-plant2.onclick = function () {
-  let item2 = pullOfPlants.find(item2 => item2.id == 2);
-  if (item2.count == 0) {
-    myPlants.push(item2);
-    item2.count += 1;
-  } else {
-    item2.count += 1;
-  }
-  console.log(myPlants)
-};
+function clickElem(e) {
+  e.stopPropagation()
+  const id = Number(e.target.getAttribute('id'))
+  let item = pullOfPlants.find(item => item.id ===id );
+  if (item.count == 0) {
+    myPlants.push(item);
+  } 
+  item.count += 1;
+  console.log(e.target.getAttribute('id'));
+  console.log (myPlants);
+}
+

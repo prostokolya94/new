@@ -152,6 +152,7 @@ a:hover {
 .planty {
   height: 60px;
   width: 60px;
+  pointer-events: none;
 }
 
 .plant:hover {
