@@ -17,11 +17,25 @@
       <div class="intro">Plant Me</div>
     </div>
     <div class="garden">
-      <div class="plant"><img class="planty" src="/images/png/002-plant.png"></div>
-      <div class="plant"><a href="list.html"><img class="plus" src="/images/png/plus.png"></a></div>
+      <a href="list.html" class="add-plant"><img class="plus" src="/images/png/plus.png"></a>
+    </div>
+
+    <div class="plant-info">
+      <div class="title"><span class="title-value">Фиалка</span> <span class="latin">Saintpaulia</span></div>
+      <div class="count">Колличество: <span class="count-value">2</span></div>
+      <div class="last-water">Последнии полив: <span class="last-water-value">сегодня 17:43</span></div>
+      <div class="water-timeout">Интервал полива: <span class="water-timeout-value">72 часа</span></div>
+      <div class="temp">Требуемая температура: <span class="min-temp">15C</span> - <span class="max-temp">24C</span></div>
+      <div class="light-mode">Предпочитаемый свет: <span class="light-mode-value">рассеянный свет</span></div>
+      <div class="light-time">Световой день: <span class="light-time-value">14 часов</span></div>
+      <div class="buttons">
+        <div class="pour">Полить</div>
+        <div class="clear">Удалить</div>
+      </div>
     </div>
   </div>
-  <script src="./script.js"> </script>
+  <script src="./networkService.js"></script>
+  <script src="./loginScript.js"> </script>
 </body>
 
 </html>

@@ -1,20 +1,4 @@
 @font-face {
-	font-family: 'RobotoCondensed-Regular';
-	src: url('fonts/RobotoCondensed-Regular.eot');
-	src: local('вє'), url('fonts/RobotoCondensed-Regular.woff') format('woff'), url('fonts/RobotoCondensed-Regular.ttf') format('truetype'), url('fonts/RobotoCondensed-Regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'RobotoCondensed-Italic';
-	src: url('fonts/RobotoCondensed-Italic.eot');
-	src: local('вє'), url('fonts/RobotoCondensed-Italic.woff') format('woff'), url('fonts/RobotoCondensed-Italic.ttf') format('truetype'), url('fonts/RobotoCondensed-Italic.svg') format('svg');
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
 	font-family: 'Roboto-Italic';
 	src: url('fonts/Roboto-Italic[1].eot');
 	src: local('вє'), url('fonts/Roboto-Italic[1].woff') format('woff'), url('fonts/Roboto-Italic[1].ttf') format('truetype'), url('fonts/Roboto-Italic[1].svg') format('svg');
@@ -28,7 +12,9 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -38,6 +24,7 @@ body {
 }
 
 .container {
+  position: relative;
   width: 375px;
   height: 625px;
   background: linear-gradient(to top left, rgb(95, 177, 95), rgb(193, 241, 193));
@@ -67,10 +54,11 @@ body {
 }
 
 .intro {
-  margin: 0 0 0 25%;
+  display: flex;
+  justify-content: center;
   font-size: 50px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .intro-up {
@@ -124,6 +112,7 @@ a:hover {
   display: flex;
   padding: 0;
   transition: 0.2s;
+  flex-wrap: wrap;
 }
 
 .garden-down {
@@ -131,24 +120,26 @@ a:hover {
   width: 80%;
   display: flex;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .next {
   margin: 10px auto 0;
 }
 
-.plant {
+.plant, .add-plant {
+  cursor: pointer;
   align-items: center;
   height: 80px;
-  width: 80px;
+  width: 21.5%;
   background: white;
-  margin: 0 5px;
+  margin: 0 5px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.2s 0.1s;
+  transition: 0.3s;
+  border-radius: 4px;
 }
-
 .planty {
   height: 60px;
   width: 60px;
@@ -157,6 +148,7 @@ a:hover {
 
 .plant:hover {
   transform: scale(1.1);
+  box-shadow: 0px 0px 11px -1px rgba(0,0,0,0.75);
 }
 
 .back-button {
@@ -164,4 +156,59 @@ a:hover {
   display: inline-block;
   vertical-align:top; 
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.plant-info {
+  position: absolute;
+  width: calc(100% - 12px);
+  height: 50vh;
+  bottom: 0;
+  left: 6px;
+  background: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0px 0px 11px -1px rgba(0,0,0,0.75);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(420px);
+  transition: .5s;
+}
+
+.plant-info.active {
+  transform: translateY(0);
+}
+
+.plant-info .title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.plant-info div {
+  margin-bottom: 16px;
+}
+
+.plant-info div span {
+  font-family: 'Roboto-Italic';
+}
+
+.plant-info .buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+}
+
+.plant-info .buttons div {
+  cursor: pointer;
+  width: 40%;
+  text-align: center;
+  background: #ccc;
+  border-radius: 16px;
+  height: 40px;
+  line-height: 40px;
+  transition: .3s;
+}
+
+.plant-info .buttons div:hover {
+  box-shadow: 0px 0px 11px -1px rgba(0,0,0,0.75);
 }
