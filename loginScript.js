@@ -1,7 +1,9 @@
 // массив путей с возможными картинками
 const imgUrls = [
   '/images/svg/botanic.svg',
-  '/images/png/002-plant.png',
+  '/images/svg/002-hydrangea.svg',
+  '/images/svg/001-kalanchoe.svg',
+  '/images/svg/aloe-vera.svg',
 ];
 
 const infoBlock = document.querySelector('.plant-info');
@@ -81,9 +83,9 @@ function calculateTempMode(mode) {
   case 1:
     return 'темнота';
   case 5:
-    return 'рассеянный свет';
+    return 'рассеянный';
   case 10:
-    return 'прямой свет';
+    return 'прямой';
   default:
     return 'неизвестно';
  }

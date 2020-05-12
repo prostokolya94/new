@@ -3,7 +3,9 @@
 // массив путей с возможными картинками
 const imgUrls = [
   '/images/svg/botanic.svg',
-  '/images/png/002-plant.png',
+  '/images/svg/002-hydrangea.svg',
+  '/images/svg/001-kalanchoe.svg',
+  '/images/svg/aloe-vera.svg',
 ];
 
 // асинхроная функция

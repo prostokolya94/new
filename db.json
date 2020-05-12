@@ -1,20 +1,20 @@
 {
   "flowerbed": [
     {
-      "plant_id": 1,
-      "id": 12
+      "plant_id": 3,
+      "id": 6
     },
     {
       "plant_id": 2,
-      "id": 13
+      "id": 8
     },
     {
       "plant_id": 1,
-      "id": 14
+      "id": 9
     },
     {
-      "plant_id": 2,
-      "id": 15
+      "plant_id": 4,
+      "id": 10
     }
   ],
   "plants": [
@@ -26,21 +26,45 @@
       "timeoutOfWater": 72,
       "maxTemp": 24,
       "minTemp": 15,
-      "lightMode": 15,
+      "lightMode": 5,
       "lightTime": 14,
       "imageId": 0
     },
     {
       "id": 2,
       "count": 0,
-      "name": "Фиалка",
-      "nameInLatin": "Saintpaulia",
-      "timeoutOfWater": 31,
-      "maxTemp": 24,
-      "minTemp": 1,
+      "name": "Гортензия комнатная",
+      "nameInLatin": "Hydrangea",
+      "timeoutOfWater": 24,
+      "maxTemp": 20,
+      "minTemp": 10,
       "lightMode": 5,
-      "lightTime": 14,
+      "lightTime": 12,
       "imageId": 1
+    },
+    {
+      "id": 3,
+      "count": 0,
+      "name": "Каланхоэ",
+      "nameInLatin": "Kalanchoe",
+      "timeoutOfWater": 24,
+      "maxTemp": 28,
+      "minTemp": 14,
+      "lightMode": 5,
+      "lightTime": 12,
+      "imageId": 2
+    },
+    {
+      "id": 4,
+      "count": 0,
+      "name": "Алоэ вера",
+      "nameInLatin": "Aloe",
+      "timeoutOfWater": 24,
+      "maxTemp": 24,
+      "minTemp": 14,
+      "lightMode": 10,
+      "lightTime": 14,
+      "imageId": 3
     }
   ]
 }
