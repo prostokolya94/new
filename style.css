@@ -27,10 +27,11 @@ body {
   position: relative;
   width: 375px;
   height: 625px;
-  background: linear-gradient(to top left, rgb(95, 177, 95), rgb(193, 241, 193));
+  background: linear-gradient(to top left, rgb(16, 125, 14),rgba(171, 255, 169, 1));
   margin: 0 auto;
   overflow: hidden;
   border-radius: 5px;
+  transition: 0.3s linear;
 }
 
 .header {
@@ -56,7 +57,7 @@ body {
   justify-content: center;
   font-size: 50px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
-  transition: 0.3s;
+  transition: 0.5s ease-in-out;
 }
 
 .intro-up {
@@ -92,7 +93,7 @@ a:hover {
 }
 
 .preview {
-  border: 1px solid gray;
+  border: 1px solid black;
   border-radius: 10px;
   margin: 50px 0 0 37px;
   width: 300px;
@@ -102,7 +103,7 @@ a:hover {
   padding: 5px 3px;
   font-family: 'Roboto-Italic';
   box-shadow: 2px 1px 1px rgba(85, 138, 75, 0.397); 
-  background: linear-gradient(to top, rgb(95, 177, 95), rgb(193, 241, 193));
+  background: #ffffff;
 }
 
 .garden {
@@ -112,6 +113,11 @@ a:hover {
   padding: 0;
   transition: 0.2s;
   flex-wrap: wrap;
+}
+
+.flat {
+  position: absolute;
+  margin-top: 70px;
 }
 
 .garden-down {
@@ -131,7 +137,7 @@ a:hover {
   align-items: center;
   height: 80px;
   width: 21.5%;
-  background: white;
+  background: rgba(160, 88, 88, 0);
   margin: 0 5px 10px;
   display: flex;
   align-items: center;

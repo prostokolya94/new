@@ -13,6 +13,7 @@ let choosenPlantId = null;
 (async function () {
   // сдвиг лого вверх при входе в ЛК
   introAnimation(300);
+  
   const networkService = new NetworkService();
   const flowerbed = await networkService.getFlowerbed();
 
@@ -101,6 +102,15 @@ function introAnimation(time) {
   setTimeout(introUp, time);
 }
 
+//функция, анимирующая бэкграунд
+function backgroundAnimation(times) {
+  let containers = document.querySelector('.container');
+  function backgroundChange() {
+    containers.style.background = 'linear-gradient(to left, rgb(95, 177, 95), rgb(193, 241, 193))';
+  }
+  setTimeout(backgroundChange, times);
+}
+
 document.onclick = e => {
   const { target } = e;
   if (!target.closest('.plant-info')
@@ -109,3 +119,4 @@ document.onclick = e => {
     choosenPlantId = null;
   }
 }
+
