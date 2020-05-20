@@ -24,14 +24,27 @@ body {
 }
 
 .container {
+  animation: gradient 10s ease-in infinite;
   position: relative;
   width: 375px;
   height: 625px;
-  background: linear-gradient(to top left, rgb(16, 125, 14),rgba(171, 255, 169, 1));
+  background: linear-gradient(-45deg, #2e9625, #b2e71f, #66bd5a, #15570f);
+  background-size: 400% 400%;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 5px;
-  transition: 0.3s linear;
+  transition: 1s ;
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 .header {
@@ -98,16 +111,24 @@ a:hover {
   margin: 50px 0 0 37px;
   width: 300px;
   text-align: center;
-  text-transform: uppercase;
   color: black;
   padding: 5px 3px;
   font-family: 'Roboto-Italic';
   box-shadow: 2px 1px 1px rgba(85, 138, 75, 0.397); 
   background: #ffffff;
+  opacity: 0.6;
 }
 
 .garden {
-  margin: 50px auto 0;
+  margin: 300px auto 0;
+  width: 80%;
+  display: flex;
+  padding: 0;
+  transition: 0.2s;
+  flex-wrap: wrap;
+}
+.garden-down {
+  margin: 80px auto 0;
   width: 80%;
   display: flex;
   padding: 0;
@@ -115,17 +136,11 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.flat {
+.window {
+  z-index: 1;
   position: absolute;
-  margin-top: 70px;
-}
-
-.garden-down {
-  margin: 110px auto 0;
-  width: 80%;
-  display: flex;
-  padding: 0;
-  flex-wrap: wrap;
+  margin: -50px 10px 0 10px ;
+  pointer-events: none;
 }
 
 .next {
@@ -144,6 +159,7 @@ a:hover {
   justify-content: center;
   transition: 0.3s;
   border-radius: 4px;
+  z-index: 2;
 }
 .planty {
   height: 60px;
@@ -153,7 +169,7 @@ a:hover {
 
 .plant:hover {
   transform: scale(1.1);
-  box-shadow: 0px 0px 11px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.3);
 }
 
 .back-button {
@@ -177,7 +193,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   transform: translateY(420px);
-  transition: .5s;
+  transition: .9s;
 }
 
 .plant-info.active {

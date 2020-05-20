@@ -96,20 +96,12 @@ function calculateTempMode(mode) {
 function introAnimation(time) {
   let intro = document.querySelector('.intro');
   function introUp() {
-    intro.style.transform = 'translateY(-60px)';
+    intro.style.transform = 'translateY(-70px)';
     intro.style.color = 'rgb(45, 51, 34)';
   }
   setTimeout(introUp, time);
 }
 
-//функция, анимирующая бэкграунд
-function backgroundAnimation(times) {
-  let containers = document.querySelector('.container');
-  function backgroundChange() {
-    containers.style.background = 'linear-gradient(to left, rgb(95, 177, 95), rgb(193, 241, 193))';
-  }
-  setTimeout(backgroundChange, times);
-}
 
 document.onclick = e => {
   const { target } = e;
